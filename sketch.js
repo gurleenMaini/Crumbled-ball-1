@@ -23,12 +23,12 @@ function setup() {
 	//Create the Bodies Here.
 	ground= new Ground(600,570,1200,20);
 
-	paper= new Paper(80,450);
+	paper= new Paper(40,450,40);
 
 	log1= new Dustbin(1000,550,200,20);
 	log2= new Dustbin(1090,490,20,100);
 	log3= new Dustbin(910,490,20,100);
-  
+
 	Engine.run(engine);
   
 }
@@ -46,12 +46,12 @@ function draw() {
   log2.display();
   log3.display();
 
-  keyPressed();
+  
   drawSprites();
 }
 
 function keyPressed() {
 	if (keyCode=== UP_ARROW) {
-	  Matter.Body.applyForce(paper.body,paper.body.position,{x:10,y:-9});
+	  Matter.Body.applyForce(paper.body,paper.body.position,{x:85,y:-85});
 	}
 }

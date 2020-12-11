@@ -1,5 +1,5 @@
 class Paper{
-    constructor(x,y){
+    constructor(x,y,radius){
         var options= {
           isStatic:false,
           restitution:0.3,
@@ -7,8 +7,7 @@ class Paper{
           density:1.2
         }
 
-        this.body = Bodies.circle(x, y,20,options);
-        this.radius=20;
+      this.body = Bodies.circle(x, y,radius/2,options);
 
       World.add(world, this.body);
     }
